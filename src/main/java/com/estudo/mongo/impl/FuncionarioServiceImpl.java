@@ -43,6 +43,13 @@ public class FuncionarioServiceImpl implements FuncionarioService {
     }
 
     @Override
+    public void excluir(Funcionario funcionario) {
+        this.funcionarioRepository.delete(funcionario);
+        System.out.println("Funcionario excluido com sucesso");
+    }
+
+
+    @Override
     public List<Funcionario> obterFuncionariosPorRangeDeIdade(Integer de, Integer ate) {
         return this.funcionarioRepository.obterFuncionariosPorRangeDeIdade(de, ate);
     }

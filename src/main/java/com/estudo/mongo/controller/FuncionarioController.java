@@ -31,6 +31,13 @@ public class FuncionarioController {
 
     }
 
+    @DeleteMapping
+    public void excluir(@RequestBody Funcionario funcionario){
+
+        this.funcionarioService.excluir(funcionario);
+
+    }
+
     @GetMapping("/range")
     public List<Funcionario> obterFuncionariosPorRangeDeIdade(@RequestParam("de") Integer de, @RequestParam("ate") Integer para){
 
